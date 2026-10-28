@@ -2,7 +2,7 @@
 # California Marine Sanctuary Foundation
 # MPA Watch: Intercept Survey
 
-# Goal : to map homes based on codes where respondents were surveyed
+# Goal : to map homes based on codes where respondents were surveyed for California
 
 # ------------------
 library(tidyverse)
@@ -36,7 +36,7 @@ st_crs(d00)
 
 
 # survey data ------
-d1 <- read_csv("./results/mwis_p2_clean3_maindata_responses.csv") %>% 
+d1 <- read_csv("./results/mwis_p2_clean4_maindata_responses.csv") %>% 
   mutate(
     m3_program = recode(
       m3_program,

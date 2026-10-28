@@ -11,7 +11,7 @@ library(janitor)
 library(colorspace)
 library(sf)
 library(scales)
-library(ggspatial) # For north arrow and scale bar
+library(ggspatial) #  north arrow and scale bar
 library(ggnewscale)
 
 
@@ -37,7 +37,7 @@ st_crs(d00)
 
 
 # survey data ------
-d1<-read_csv("./results/mwis_p2_clean3_maindata_responses.csv")%>%
+d1<-read_csv("./results/mwis_p2_clean4_maindata_responses.csv")%>%
   glimpse()
 
 
@@ -48,7 +48,7 @@ zip_counts <- d1 %>%
   mutate(zip_clean = as.numeric(str_pad(as.character(q2_zip_code), width = 5, side = "left", pad = "0"))) %>% 
   count(zip_clean, name = "count")%>%
   glimpse()
-view(zip_counts)
+# view(zip_counts)
 
 
 # Join spatial data with counts ------------
