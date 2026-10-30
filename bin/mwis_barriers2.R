@@ -40,7 +40,7 @@ barrier_summary <- d1 %>%
   )
 
 print(barrier_summary)
-
+write_csv(barrier_summary,"./doc/barrier_summary.csv")
 
 # graph ------------
 ggplot(barrier_summary, aes(x = count, y = fct_reorder(q6_barriers, count))) +
